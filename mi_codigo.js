@@ -25,3 +25,23 @@ function crearChart(){
 
 }
 crearChart();
+function crearChart2(){
+
+  const canvas = document.getElementById('myChart2');
+  new Chart(canvas,
+ 
+  {
+    type: 'bar',
+    data: {
+      labels: data.map(row => row.mes),
+      datasets: [
+        {
+          label: 'Acquisitions by month',
+          data: data.map(row => row.total)
+        }
+      ]
+    }
+  });
+
+}
+crearChart2();
